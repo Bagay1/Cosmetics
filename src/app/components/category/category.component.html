@@ -1,11 +1,36 @@
 <section class="category__offer">
+  <div *ngFor="let products of category_services, let i=index">
   <div class="container">
-    <h1>Категория</h1>
+    <h1>{{products.title}}</h1>
+  </div>
   </div>
 </section>
 
 <section class="category__product__list">
+  <div class="container py-5">
+    <div *ngFor="let products of category_services, let i=index">
+      <div class="row row-cols-1 row-cols-md-3">
+        <div *ngFor="let service of products.services">
+          <div class="col">
+            <div class="card my-3 overflow-hidden">
+              <img src="assets/images/pages/woman-beauty-salon-face-treatment.png" alt="" class="img-fluid">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8 title">
+                    <h5>{{service.title}}</h5>
+                  </div>
+                  <div class="col-4 text-end price">
+                    <p>{{service.price}}</p>
+                  </div>
+                </div>
 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </section>

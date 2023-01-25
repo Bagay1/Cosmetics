@@ -9,6 +9,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './components/category/category.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,12 +20,12 @@ import { CategoryComponent } from './components/category/category.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
     HttpClientModule,
+    AppRoutingModule,
     NgbModule,
     NgbDropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

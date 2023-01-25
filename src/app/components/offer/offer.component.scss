@@ -5,4 +5,9 @@
     color: white;
     padding: 120px 0;
   }
+
+  @media screen and (max-width: 768px) {
+    background-position: right;
+
+  }
 }

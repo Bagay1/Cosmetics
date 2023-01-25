@@ -6,3 +6,24 @@
 
 
 }
+
+.category__product__list{
+  background-color: #f3f3f3;
+  .card{
+    transition: 600ms;
+    border: none;
+    background-color: #eeeeee;
+    &:hover{
+      box-shadow: 12px 6px 12px rgba(0, 0, 0, 0.09);
+      background-color: white;
+      border-radius: 10px;
+    }
+    .price{
+      font-size: 22px ;
+      font-weight: bold;
+      color: green;
+    }
+
+
+  }
+}

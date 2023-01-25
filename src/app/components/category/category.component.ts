@@ -1,32 +1,43 @@
 import {Component, OnInit} from '@angular/core';
 import {ServerService} from "../../server.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, ParamMap, Router} from "@angular/router";
+import {CategoryService} from "../../model/Service";
+import {switchMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss']
 })
-export class CategoryComponent implements OnInit {
+export class CategoryComponent implements OnInit{
 
   url?: string
 
+
+  category_services: CategoryService[]|undefined
+
   constructor(private serverService: ServerService,
               private activeRouter: ActivatedRoute,
+              private router: Router
   ) {
     this.url = activeRouter.snapshot.params['url']
   }
 
 
-  getServiceByCategory(url1:string) {
-    this.serverService.dataGet('category/product/' + url1).subscribe(result => {
-      // console.log(result);
+
+  getServiceByCategory() {
+    this.serverService.dataGet('category/product/' + this.url).subscribe(result => {
+      this.category_services = result,
+      console.log(result);
     })
   }
 
   ngOnInit() {
-    this.activeRouter.queryParams.subscribe(params=>{this.getServiceByCategory(params['url'])})
-    console.log(this.activeRouter);
+    this.activeRouter.paramMap.pipe(
+      switchMap((params: ParamMap)=>
+        this.serverService.dataGet('category/product/' + params.get('url')!)
+      )
+    )
   }
 
 
