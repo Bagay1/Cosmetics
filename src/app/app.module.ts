@@ -3,16 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { OfferComponent } from './components/offer/offer.component';
+import {HttpClientModule} from "@angular/common/http";
+import { MenuComponent } from './components/menu/menu.component';
+import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OfferComponent,
+    MenuComponent,
+    CategoryComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule,
+    NgbDropdownModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
