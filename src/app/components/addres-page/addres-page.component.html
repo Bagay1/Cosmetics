@@ -1,0 +1,48 @@
+<section class="address__block mt-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-addres h-100">
+          <div class="card-body" *ngFor="let info of info_company">
+            <div class="text-center mb-3"><h3>О компании</h3></div>
+            <dl class="row">
+              <dt class="col-sm-3">Полное наименование</dt>
+              <dd class="col-sm-9">{{info.full_name}}</dd>
+
+              <dt class="col-sm-3">Адрес места нахождения</dt>
+              <dd class="col-sm-9" *ngFor="let address of info.address">
+                <p>{{address.address}}</p>
+              </dd>
+
+              <dt class="col-sm-3">Лицензия</dt>
+              <dd class="col-sm-9"><a href="{{info.url_lic}}"><i class="bi bi-filetype-pdf"></i> Скачать выписку из "Росздравнадзора"</a></dd>
+              <dt class="col-sm-3">ИНН</dt>
+              <dd class="col-sm-9">{{info.numder_inn}}</dd>
+
+              <dt class="col-sm-3 text-truncate">ОГРН</dt>
+              <dd class="col-sm-9">{{info.number_ogrn}}</dd>
+
+              <dt class="col-sm-3">Телефон</dt>
+              <dd class="col-sm-9"><a href="tel:"></a>
+
+              </dd>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+        <div style="overflow:hidden;"><a href="https://yandex.ru/maps/172/ufa/?utm_medium=mapframe&utm_source=maps"
+                                         style="color:#eee;font-size:12px;position:absolute;top:0px;">Уфа</a><a
+          href="https://yandex.ru/maps/172/ufa/house/ulitsa_entuziastov_15/YU8YdgRkTUACQFtufXt3cX9iYA==/?indoorLevel=0&ll=56.034471%2C54.760256&utm_medium=mapframe&utm_source=maps&z=17.28"
+          style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Энтузиастов, 15 — Яндекс Карты</a>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CCUrFDcAPD" width="100%" height="300" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+
+
+</section>

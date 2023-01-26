@@ -3,6 +3,7 @@ import {ServerService} from "../../server.service";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {CategoryService} from "../../model/Service";
 import {switchMap} from "rxjs/operators";
+import {interval} from "rxjs";
 
 @Component({
   selector: 'app-category',
@@ -37,7 +38,8 @@ export class CategoryComponent implements OnInit{
       switchMap((params: ParamMap)=>
         this.serverService.dataGet('category/product/' + params.get('url')!)
       )
-    )
+    ).subscribe(data=>{console.log(data), this.category_services = data})
+
   }
 
 
