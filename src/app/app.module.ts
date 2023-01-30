@@ -11,6 +11,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { AboutComponent } from './components/about/about.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { AddresPageComponent } from './components/addres-page/addres-page.component';
+import { StaffComponent } from './components/staff/staff.component';
 
 
 
@@ -23,7 +24,8 @@ import { AddresPageComponent } from './components/addres-page/addres-page.compon
     CategoryComponent,
     AboutComponent,
     AboutPageComponent,
-    AddresPageComponent
+    AddresPageComponent,
+    StaffComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
