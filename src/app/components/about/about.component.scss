@@ -1,4 +1,20 @@
 .about__offer{
-  background-color: black;
-  height: 500px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(5, 5, 5, 0.7) 100%), url('/assets/images/pages/fasade 2.png');
+  background-size: cover;
+  background-position: center top;
+  height: 600px;
+  @media screen and (max-width: 760px) {
+    height: 300px;
+
+  }
+}
+.row{
+  display: flex;
+  height: 600px;
+  align-content: center;
+  color: white;
+  @media screen and (max-width: 760px) {
+    height: 300px;
+
+  }
 }

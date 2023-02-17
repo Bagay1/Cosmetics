@@ -1,4 +1,4 @@
-.category__offer{
+.category__offer {
 
   padding: 8% 0;
   background-color: black;
@@ -7,23 +7,42 @@
 
 }
 
-.category__product__list{
+.category__product__list {
   background-color: #f3f3f3;
-  .card{
+
+  .card {
     transition: 600ms;
     border: none;
     background-color: #eeeeee;
-    &:hover{
+
+    &:hover {
       box-shadow: 12px 6px 12px rgba(0, 0, 0, 0.09);
       background-color: white;
       border-radius: 10px;
     }
-    .price{
-      font-size: 22px ;
+
+    .price {
+      font-size: 22px;
       font-weight: bold;
       color: green;
     }
 
 
+  }
+}
+
+.table {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 10px;
+  thead {
+    padding: 12px 5px;
+    background-color: #dadada;
+    color: black;
+    font-weight: bold;
+  }
+  tbody{
+    text-decoration: none;
   }
 }
